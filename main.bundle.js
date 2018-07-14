@@ -693,7 +693,7 @@ var ControlsComponent = (function () {
         this.sliderMax = 0;
         this.originalLineDraw = __WEBPACK_IMPORTED_MODULE_2_chart_js__["Chart"].controllers.line.prototype.draw;
         this.bluetoothHandler = new __WEBPACK_IMPORTED_MODULE_4_app_shared_bluetoothHandler__["a" /* BluetoothHandler */]();
-        this.showGraph = false;
+        this.showGraph = true;
         this.mainChartOptions = {
             animation: false,
             responsive: true,
@@ -859,13 +859,13 @@ var ControlsComponent = (function () {
             this.setIndex(this.sliderMax);
             //this.chart.chart.update();
             // this.drawLine(this.data.boardReference.q0[this.index].x);
-            for (var i = 0; i < this.accelerationChartData.length; i++) {
-                if (this.chartData[i].data.length < this.accelerationChartData[i].data.length) {
-                    while (this.chartData[i].data.length < this.accelerationChartData[i].data.length) {
-                        this.chartData[i].data.push(this.accelerationChartData[i].data[this.chartData[i].data.length]);
-                    }
-                }
-            }
+            // for (let i:number = 0; i < this.accelerationChartData.length; i++){
+            //   if ( this.chartData[i].data.length < this.accelerationChartData[i].data.length){
+            //     while (this.chartData[i].data.length < this.accelerationChartData[i].data.length){
+            //       this.chartData[i].data.push(this.accelerationChartData[i].data[this.chartData[i].data.length]);
+            //     }
+            //   }
+            // }
             //this.chart.chart.update();
             //this.accelerationChartData[0].data.push({x:this.accelerationChartData[0].data.length,y:0});
         }
