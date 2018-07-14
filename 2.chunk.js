@@ -148,7 +148,7 @@ var ThreeDComponent = (function () {
             var accelVector = new __WEBPACK_IMPORTED_MODULE_2_three__["n" /* Vector3 */](ax, ay, az);
             accelVector.applyEuler(this.cube.rotation);
             accelVector.setY(accelVector.y - 1.0);
-            accelVector.normalize();
+            //accelVector.normalize();
             this.arrow.setLength(Math.sqrt(accelVector.x * accelVector.x + accelVector.y * accelVector.y + accelVector.z * accelVector.z));
             //normalize the direction vector (convert to vector of length 1)
             this.arrow.setDirection(accelVector);
