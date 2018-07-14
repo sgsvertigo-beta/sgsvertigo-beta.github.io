@@ -145,10 +145,11 @@ var ThreeDComponent = (function () {
             var ax = data.boardReference.ax[localIndex].y;
             var az = data.boardReference.ay[localIndex].y; //this is our world z
             var ay = data.boardReference.az[localIndex].y;
-            this.arrow.setLength(Math.sqrt(ax * ax + ay * ay + az * az));
             var accelVector = new __WEBPACK_IMPORTED_MODULE_2_three__["n" /* Vector3 */](ax, ay, az);
             accelVector.applyEuler(this.cube.rotation);
             accelVector.setY(accelVector.y - 1.0);
+            accelVector.normalize();
+            this.arrow.setLength(20 * Math.sqrt(accelVector.x * accelVector.x + accelVector.y * accelVector.y + accelVector.z * accelVector.z));
             //normalize the direction vector (convert to vector of length 1)
             this.arrow.setDirection(accelVector);
         }
