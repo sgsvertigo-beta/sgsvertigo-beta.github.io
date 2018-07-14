@@ -693,7 +693,7 @@ var ControlsComponent = (function () {
         this.sliderMax = 0;
         this.originalLineDraw = __WEBPACK_IMPORTED_MODULE_2_chart_js__["Chart"].controllers.line.prototype.draw;
         this.bluetoothHandler = new __WEBPACK_IMPORTED_MODULE_4_app_shared_bluetoothHandler__["a" /* BluetoothHandler */]();
-        this.showGraph = true;
+        this.showGraph = false;
         this.mainChartOptions = {
             animation: false,
             responsive: true,

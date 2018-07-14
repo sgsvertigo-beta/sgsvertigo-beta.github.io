@@ -143,8 +143,8 @@ var ThreeDComponent = (function () {
             -data.boardReference.q2[localIndex].y, data.boardReference.q0[localIndex].y);
             this.cube.setRotationFromQuaternion(quaternion);
             var ax = data.boardReference.ax[localIndex].y;
-            var ay = data.boardReference.ay[localIndex].y;
-            var az = data.boardReference.az[localIndex].y;
+            var az = data.boardReference.ay[localIndex].y; //this is our world z
+            var ay = data.boardReference.az[localIndex].y;
             this.arrow.setLength(Math.sqrt(ax * ax + ay * ay + az * az));
             var accelVector = new __WEBPACK_IMPORTED_MODULE_2_three__["n" /* Vector3 */](ax, ay, -az);
             accelVector.applyEuler(this.cube.rotation);
