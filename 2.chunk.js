@@ -146,8 +146,9 @@ var ThreeDComponent = (function () {
             var az = data.boardReference.ay[localIndex].y; //this is our world z
             var ay = data.boardReference.az[localIndex].y;
             this.arrow.setLength(Math.sqrt(ax * ax + ay * ay + az * az));
-            var accelVector = new __WEBPACK_IMPORTED_MODULE_2_three__["n" /* Vector3 */](ax, ay, -az);
+            var accelVector = new __WEBPACK_IMPORTED_MODULE_2_three__["n" /* Vector3 */](ax, ay, az);
             accelVector.applyEuler(this.cube.rotation);
+            accelVector.setZ(accelVector.z - 1.0);
             //normalize the direction vector (convert to vector of length 1)
             this.arrow.setDirection(accelVector);
         }
